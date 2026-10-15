@@ -138,22 +138,7 @@
         <noscript><p>The interactive table requires JavaScript. <a href="assets/paper/RewardFlow.pdf">Read all benchmark tables in the paper.</a></p></noscript>
 
         <div class="evidence-grid">
-          <article class="ablation-panel" aria-labelledby="ablation-title">
-            <div class="panel-heading"><span class="mini-label">ABLATION STUDY</span><h3 id="ablation-title">What makes RewardFlow work.</h3><p>The full method combines a learned partition head, warm start, and step-wise KL.</p></div>
-            <div class="small-table-wrap">
-              <table class="small-table ablation-table">
-                <caption class="sr-only">Selected optimization-design ablations from Table 8 of the paper. Higher is better for both metrics.</caption>
-                <thead><tr><th scope="col">Configuration</th><th scope="col">HPS-v2.1 ↑</th><th scope="col">Aesthetic ↑</th></tr></thead>
-                <tbody>
-                  <tr><th scope="row">Without step-wise KL</th><td>0.270</td><td>5.695</td></tr>
-                  <tr><th scope="row">Without partition head</th><td>0.334</td><td>6.157</td></tr>
-                  <tr><th scope="row">Random head initialization</th><td>0.363</td><td>6.385</td></tr>
-                  <tr class="highlight-row"><th scope="row">RewardFlow (full)</th><td><strong>0.368</strong></td><td><strong>6.468</strong></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="source-note">Selected component ablations from <a href="assets/paper/RewardFlow.pdf#page=9" target="_blank" rel="noopener">Table 8 in the paper</a>. Each variant modifies the full method’s optimization design.</p>
-          </article>
+          <article class="diversity-panel"><div class="panel-heading"><span class="mini-label">DIVERSITY</span><h3>A broader generation distribution.</h3><p>Greater perceptual variation with a lower FID.</p></div><div class="small-table-wrap"><table class="small-table"><thead><tr><th scope="col">Method</th><th scope="col">DreamSim ↑</th><th scope="col">FID ↓</th><th scope="col">BFID ↑</th></tr></thead><tbody><tr><th scope="row">Flow-GRPO</th><td>0.163</td><td>34.040</td><td>0.097</td></tr><tr><th scope="row">DiverseGRPO</th><td>0.185</td><td>29.820</td><td>0.165</td></tr><tr class="highlight-row"><th scope="row">RewardFlow</th><td><strong>0.196</strong></td><td><strong>22.718</strong></td><td><strong>0.385</strong></td></tr></tbody></table></div><p class="source-note">Reported diversity evaluation in the paper.</p></article>
           <article class="study-panel"><div class="panel-heading"><span class="mini-label">HUMAN EVALUATION</span><h3>Preferred by people.</h3><p>Fraction of times selected as the best method.</p></div><div class="study-bars"><div class="study-row"><span>Prompt alignment</span><div class="study-track"><span style="width:76.8%">76.8%</span><i style="width:15.6%"></i><b style="width:7.6%"></b></div></div><div class="study-row"><span>Visual quality</span><div class="study-track"><span style="width:82.4%">82.4%</span><i style="width:12.2%"></i><b style="width:5.4%"></b></div></div><div class="study-row"><span>Diversity</span><div class="study-track"><span style="width:81.2%">81.2%</span><i style="width:11.6%"></i><b style="width:7.2%"></b></div></div><div class="study-row"><span>Overall preference</span><div class="study-track"><span style="width:86.8%">86.8%</span><i style="width:9.2%"></i><b style="width:4%"></b></div></div></div><div class="chart-legend"><span><i class="legend-ours"></i> RewardFlow</span><span><i class="legend-grpo"></i> Flow-GRPO</span><span><i class="legend-base"></i> SD3.5-M</span></div></article>
         </div>
         <details class="training-details"><summary>Experimental setup <span aria-hidden="true">+</span></summary><div><p>Both backbones are trained for 600 epochs on 8 NVIDIA A100 GPUs. The prompt batch size is 9 for SD3.5-M and 3 for FLUX.1-dev, with 24 trajectories per prompt. The reward coefficient is β = 1 and the step-wise KL weight is λ<sub>KL</sub> = 0.1.</p><p>Human-preference experiments use official HPDv2 prompts: 107K training prompts and 3,200 evaluation prompts, evenly divided into Animation, Concept-art, Painting, and Photo. GenEval and OCR use their task-specific datasets. All compared methods use the same training and evaluation splits for each task.</p></div></details>

@@ -29,10 +29,6 @@ dialog{border:0;padding:0;max-width:none;max-height:none;width:100vw;height:100d
 @media(min-width:621px){.authors{display:grid;grid-template-columns:repeat(4,max-content);column-gap:23px;row-gap:5px}}
 @media(max-width:620px){h1{font-size:clamp(40px,12.6vw,59px);letter-spacing:-2.8px}.hero-actions .button{white-space:nowrap}.hero-actions .button-detail{white-space:nowrap}.hero-actions{gap:6px}.hero-actions .button{padding-inline:11px}}
 @media(max-width:359px){.hero-actions .button{padding-inline:8px;font-size:10px;gap:5px}.hero-actions .button-detail{font-size:7px;padding-left:4px}.hero-actions .button-secondary:last-child{padding-inline:8px}.nav-paper{font-size:9px}.nav-wrap{padding-inline:15px;gap:10px}.hero-image>span{font-size:7px}}
-/* Keep the component-ablation table readable inside its compact panel. */
-.ablation-table{min-width:0;table-layout:fixed}
-.ablation-table th:first-child{width:52%;white-space:normal}
-.ablation-panel .source-note a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
 /* Keep the original gallery's large, small, and wide tiles below the title. */
 .hero-showcase.gallery-grid{align-items:stretch;gap:12px;margin-top:0}
 .showcase-caption{margin-top:18px}
