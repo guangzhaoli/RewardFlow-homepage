@@ -8,7 +8,7 @@ An English academic project page for **RewardFlow: Learning to Align Flow Models
 - Six prompt comparisons, using the paper's original 512-pixel image samples.
 - Original method figure with an accessible image viewer.
 - Results for SD3.5-M and FLUX.1-dev across five reward settings.
-- Diversity results and the user study, with eight supplementary generations in the opening showcase.
+- Component-ablation results and the user study, with eight supplementary generations in the opening showcase.
 - BibTeX copy and download, responsive navigation, and keyboard support.
 
 ## Published site
@@ -57,7 +57,8 @@ The content comes from the supplied manuscript archive, dated 15 October 2026. I
 - Gallery images are extracted from `Figure/appendix_view_our.pdf`.
 - The method figure comes from `Figure/method_new.pdf`.
 - `assets/data.js` transcribes `table/multi_reward.tex`, `table/multi_reward_geneval_ocr_hps.tex`, and `table/single_reward.tex`.
-- Diversity and user-study results come from `table/diversity.tex`.
+- The component-ablation panel transcribes selected rows of `table/ablation_warmstart_and_kl.tex` (Table 8, PDF page 9), showing HPS-v2.1 and Aesthetic for the full method, no step-wise KL, no partition head, and random partition-head initialization. These are fixed ablation results, separate from the backbone/reward selectors above.
+- The headline DreamSim value and user-study results come from `table/diversity.tex`.
 - Missing benchmark values are shown as an em dash, never as zero. Best-value highlighting includes ties and is calculated separately for each selected setting.
 - The original figures and generated samples are not AI-edited or reconstructed. Gallery captions are descriptive labels, not claims about the original prompts.
 - The supplied source's duplicate `xcolor` package option is resolved only in the temporary PDF build by passing its `table` option before package loading. Scientific text and experimental results are unchanged.
