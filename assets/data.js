@@ -4,12 +4,12 @@
 // and table/single_reward.tex. No scores have been recomputed or estimated.
 window.REWARDFLOW_DATA = {
   prompts: {
+    pattern: {name: "Illustrated pattern", text: "Coffee and Donuts Seamless Vector Pattern Coffee and Donuts Seamless Vector Pattern early 20th century stock illustrations."},
+    portrait: {name: "Crochet portrait", text: "Brimmed Hat Crochet Winter Beanie With Crochet by YoureHooked."},
     mountain: {name: "Alpine lake", text: "Snow-capped peaks stand majestically above a serene lake, reflecting perfectly in its glassy surface as twilight hues paint the sky with soft pinks and purples."},
     fox: {name: "Steampunk fox", text: "A steampunk fox, adorned with brass cogs and leather straps, gracefully winds its own mechanical body with a golden key, suspended mid-leap in a whimsical dance of invention and fantasy."},
     koala: {name: "Koala plush", text: "Cuddly gray koala stuffie sitting amidst green foliage, holding a vibrant leaf between its paws, with soft fur details and expressive black eyes."},
-    cake: {name: "Citrus cake", text: "Vanilla Orange Almond Cake Recipe. Vanilla orange and almond soaked cake with layers of vanilla orange almond buttercream."},
-    portrait: {name: "Crochet portrait", text: "Brimmed Hat Crochet Winter Beanie With Crochet by YoureHooked."},
-    pattern: {name: "Illustrated pattern", text: "Coffee and Donuts Seamless Vector Pattern Coffee and Donuts Seamless Vector Pattern early 20th century stock illustrations."}
+    cake: {name: "Citrus cake", text: "Vanilla Orange Almond Cake Recipe. Vanilla orange and almond soaked cake with layers of vanilla orange almond buttercream."}
   },
   metrics: ["hps", "pick", "ir", "gen", "ocr", "aes"],
   metricNames: ["HPS-v2.1", "PickScore", "ImageReward", "GenEval", "OCR", "Aesthetic"],

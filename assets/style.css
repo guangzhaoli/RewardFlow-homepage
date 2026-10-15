@@ -29,4 +29,10 @@ dialog{border:0;padding:0;max-width:none;max-height:none;width:100vw;height:100d
 @media(min-width:621px){.authors{display:grid;grid-template-columns:repeat(4,max-content);column-gap:23px;row-gap:5px}}
 @media(max-width:620px){h1{font-size:clamp(40px,12.6vw,59px);letter-spacing:-2.8px}.hero-actions .button{white-space:nowrap}.hero-actions .button-detail{white-space:nowrap}.hero-actions{gap:6px}.hero-actions .button{padding-inline:11px}}
 @media(max-width:359px){.hero-actions .button{padding-inline:8px;font-size:10px;gap:5px}.hero-actions .button-detail{font-size:7px;padding-left:4px}.hero-actions .button-secondary:last-child{padding-inline:8px}.nav-paper{font-size:9px}.nav-wrap{padding-inline:15px;gap:10px}.hero-image>span{font-size:7px}}
+/* Supplementary samples now appear together below the paper title. */
+.hero-showcase{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.hero-showcase .hero-image:nth-child(n){display:block;transform:none;aspect-ratio:1.25}
+.showcase-caption{margin-top:18px}
+@media(max-width:850px){.hero-showcase{gap:8px}.hero-showcase .hero-image>span{font-size:8px}}
+@media(max-width:620px){.hero-showcase{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.hero-showcase .hero-image:nth-child(n){aspect-ratio:1.12}.hero-showcase .hero-image>span{font-size:8px;padding:29px 10px 9px}.hero-showcase .hero-image>span .icon{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}

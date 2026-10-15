@@ -49,7 +49,7 @@
     const button = event.target.closest("[data-lightbox]");
     if (!button) return;
     returnFocus = button;
-    const group = button.closest(".hero-showcase, .comparison-stage, .gallery-grid, .method-figure");
+    const group = button.closest(".hero-showcase, .comparison-stage, .method-figure");
     activeImages = group ? $$("[data-lightbox]", group).filter(el => el.getClientRects().length > 0) : [button];
     showImage(activeImages.indexOf(button));
     dialog.showModal();
@@ -105,7 +105,7 @@
     });
   }
   $$("[data-prompt]").forEach(button => button.addEventListener("click", () => renderPrompt(button.dataset.prompt)));
-  renderPrompt("mountain");
+  renderPrompt(Object.keys(data.prompts)[0]);
 
   let backbone = "sd35";
   function renderResults(announce = false) {

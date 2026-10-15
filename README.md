@@ -8,7 +8,7 @@ An English academic project page for **RewardFlow: Learning to Align Flow Models
 - Six prompt comparisons, using the paper's original 512-pixel image samples.
 - Original method figure with an accessible image viewer.
 - Results for SD3.5-M and FLUX.1-dev across five reward settings.
-- Diversity results, the user study, and supplementary image gallery.
+- Diversity results and the user study, with eight supplementary generations in the opening showcase.
 - BibTeX copy and download, responsive navigation, and keyboard support.
 
 ## Published site
